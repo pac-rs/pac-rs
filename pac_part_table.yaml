@@ -1,0 +1,25 @@
+# This file contains a table of all supported Qorvo PAC microcontrollers.
+#
+# It lists them by family (which corresponds to a crate),
+# then by the "device" in that family (corresponds to an SVD file,
+# and to a module within each crate).
+#
+# This data is used to generate more informative crate READMEs.
+
+pac22:
+  pac22xxx:
+    url: https://www.qorvo.com/products/p/PAC22140
+    rm: tba
+    rm_title: tba
+    rm_url: tba
+    members:
+      - pac22140
+
+pac55:
+  pac25xxx:
+    url: https://www.qorvo.com/products/p/PAC25140
+    rm: tba
+    rm_title: tba
+    rm_url: tba
+    members:
+      - pac25140
