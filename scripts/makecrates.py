@@ -36,7 +36,7 @@ name = "{crate}"
 version = "{version}"
 authors = ["Liam Kinne <liam@kinne.io>"]
 description = "Device support crates for {family} devices"
-repository = "https://github.com/stm32-rs/stm32-rs"
+repository = "https://github.com/team-arrow-racing/qorvo-pac-rs"
 readme = "README.md"
 keywords = ["qorvo", "svd2rust", "no_std", "embedded"]
 categories = ["embedded", "no-std"]
@@ -71,15 +71,14 @@ SRC_LIB_RS_TPL = """\
 //! [svd2rust/#peripheral-api](https://docs.rs/svd2rust/{svd2rust_version}/svd2rust/#peripheral-api)
 //!
 //! For more details see the README here:
-//! [stm32-rs](https://github.com/stm32-rs/stm32-rs)
+//! [qorvo-pac-rs](https://github.com/team-arrow-racing/qorvo-pac-rs)
 //!
 //! This crate supports all {family} devices; for the complete list please
 //! see:
 //! [{crate}](https://crates.io/crates/{crate})
 //!
 //! Due to doc build limitations, not all devices may be shown on docs.rs;
-//! a representative few have been selected instead. For a complete list of
-//! available registers and fields see: [stm32-rs Device Coverage](https://stm32-rs.github.io/stm32-rs/)
+//! a representative few have been selected instead.
 
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
@@ -100,7 +99,7 @@ extensive type-safe support. For more information please see the [main repo].
 Refer to the [documentation] for full details.
 
 [svd2rust]: https://github.com/rust-embedded/svd2rust
-[main repo]: https://github.com/stm32-rs/stm32-rs
+[main repo]: https://github.com/team-arrow-racing/qorvo-pac-rs
 [documentation]: https://docs.rs/{crate}/latest/{crate}/
 
 ## Usage
@@ -166,7 +165,7 @@ def read_device_table():
 def make_device_rows(table, family):
     rows = []
     for device, dt in table[family].items():
-        links = "[{}]({}), [st.com]({})".format(
+        links = "[{}]({}), [qorvo.com]({})".format(
             dt['rm'], dt['rm_url'], dt['url'])
         members = ", ".join(m for m in dt['members'])
         rows.append("| {} | {} | {} |".format(device, members, links))
