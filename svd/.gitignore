@@ -1,0 +1,3 @@
+*.svd.patched
+*.svd.formatted
+.extracted
