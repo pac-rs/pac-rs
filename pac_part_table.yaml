@@ -9,17 +9,17 @@
 pac22:
   pac22xxx:
     url: https://www.qorvo.com/products/p/PAC22140
-    rm: tba
-    rm_title: tba
-    rm_url: tba
+    rm: da008531
+    rm_title: PAC22140  User Guide
+    rm_url: https://www.qorvo.com/products/d/da008531
     members:
       - pac22140
 
 pac25:
   pac25xxx:
     url: https://www.qorvo.com/products/p/PAC25140
-    rm: tba
-    rm_title: tba
-    rm_url: tba
+    rm: da008611
+    rm_title: PAC25140 User Guide
+    rm_url: https://www.qorvo.com/products/d/da008611
     members:
       - pac25140
