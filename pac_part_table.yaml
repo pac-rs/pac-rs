@@ -15,7 +15,7 @@ pac22:
     members:
       - pac22140
 
-pac55:
+pac25:
   pac25xxx:
     url: https://www.qorvo.com/products/p/PAC25140
     rm: tba
