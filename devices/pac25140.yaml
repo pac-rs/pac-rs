@@ -1,1 +1,169 @@
 _svd: ../svd/pac25140.svd
+
+"Timer*":
+  CTL:
+    MODE:
+      _replace_enum:
+        DISABLED: [0, "Disabled Mode"]
+        UP: [1, "Up Mode"]
+        UP_DOWN: [2, "Up/Down Mode"]
+        ASYMMETRIC: [3, "Asymmetric Mode"]
+    PRDLATCH:
+      _replace_enum:
+        CTR_0: [0, "Period is latched when CTR = 0"]
+        CTR_PERIOD: [1, "Period is latched when CTR = Period"]
+        CTR_IMMEDIATE: [2, "Period is latched immediately upon register write"]
+    CLKDIV:
+      _replace_enum:
+        DIV_1: [0, "Timer input clock /1"]
+        DIV_2: [1, "Timer input clock /2"]
+        DIV_4: [2, "Timer input clock /4"]
+        DIV_8: [3, "Timer input clock /8"]
+        DIV_16: [4, "Timer input clock /16"]
+        DIV_32: [5, "Timer input clock /32"]
+        DIV_64: [6, "Timer input clock /64"]
+        DIV_128: [7, "Timer input clock /126"]
+    DTGCLK:
+      _replace_enum:
+        BEFORE_DIVIDER: [0, "Before input clock divider"]
+        AFTER_DIVIDER: [1, "After input clock divider"]
+    CLR:
+      _replace_enum:
+        DO_NOT_CLEAR: [0, "Do not clear timer counter"]
+        CLEAR: [1, "Clear timer counter"]
+  "CCTL*":
+    CCOUTINV:
+      _replace_enum:
+        NOT_INVERTED: [0, "Do not invert CCR output"]
+        INVERTED: [1, "Invert CCR output"]
+    CCLATCH:
+      _replace_enum:
+        CTR_0_RISING: [0, "Compare(latch on CTR=0)/ Capture(latch on rising edge)"]
+        CTR_PERIOD_FALLING: [1, "Compare(latch on CTR=Period)/ Capture(latch on falling edge)"]
+        IMMEDIATE_BOTH: [2, "Compare(latch immediately)/ Capture(latch on both edges)"]
+    CCINTSKIP:
+      _replace_enum:
+        DONT_SKIP: [0, "Don't skip CCR matches before interrupt"]
+        SKIP_1: [1, "Skip 1 CCR match before interrupt"]
+        SKIP_2: [2, "Skip 2 CCR match before interrupt"]
+        SKIP_3: [3, "Skip 3 CCR match before interrupt"]
+        SKIP_4: [4, "Skip 4 CCR match before interrupt"]
+        SKIP_5: [5, "Skip 5 CCR match before interrupt"]
+        SKIP_6: [6, "Skip 6 CCR match before interrupt"]
+        SKIP_7: [7, "Skip 7 CCR match before interrupt"]
+        SKIP_8: [8, "Skip 8 CCR match before interrupt"]
+        SKIP_9: [9, "Skip 9 CCR match before interrupt"]
+        SKIP_10: [10, "Skip 10 CCR match before interrupt"]
+        SKIP_11: [11, "Skip 11 CCR match before interrupt"]
+        SKIP_12: [12, "Skip 12 CCR match before interrupt"]
+        SKIP_13: [13, "Skip 13 CCR match before interrupt"]
+        SKIP_14: [14, "Skip 14 CCR match before interrupt"]
+        SKIP_15: [15, "Skip 15 CCR match before interrupt"]
+
+MEMCTL:
+  MEMCTL:
+    WSTATE:
+      _replace_enum:
+        WS_0: [0, "0 Wait States"]
+        WS_1: [1, "1 Wait States"]
+        WS_2: [2, "2 Wait States"]
+        WS_3: [3, "3 Wait States"]
+        WS_4: [4, "4 Wait States"]
+        WS_5: [5, "5 Wait States"]
+        WS_6: [6, "6 Wait States"]
+        WS_7: [7, "7 Wait States"]
+        WS_8: [8, "8 Wait States"]
+        WS_9: [9, "9 Wait States"]
+        WS_10: [10, "10 Wait States"]
+        WS_11: [11, "11 Wait States"]
+        WS_12: [12, "12 Wait States"]
+        WS_13: [13, "13 Wait States"]
+        WS_14: [14, "14 Wait States"]
+        WS_15: [15, "15 Wait States"]
+    MCLKDIV:
+      _replace_enum:
+        HCLK_DIV_1: [0, "HCLK divided by 1"]
+        HCLK_DIV_2: [1, "HCLK divided by 2"]
+        HCLK_DIV_3: [2, "HCLK divided by 3"]
+        HCLK_DIV_4: [3, "HCLK divided by 4"]
+        HCLK_DIV_5: [4, "HCLK divided by 5"]
+        HCLK_DIV_6: [5, "HCLK divided by 6"]
+        HCLK_DIV_7: [6, "HCLK divided by 7"]
+        HCLK_DIV_8: [7, "HCLK divided by 8"]
+        HCLK_DIV_9: [8, "HCLK divided by 9"]
+        HCLK_DIV_10: [9, "HCLK divided by 10"]
+        HCLK_DIV_11: [10, "HCLK divided by 11"]
+        HCLK_DIV_12: [11, "HCLK divided by 12"]
+        HCLK_DIV_13: [12, "HCLK divided by 13"]
+        HCLK_DIV_14: [13, "HCLK divided by 14"]
+        HCLK_DIV_15: [14, "HCLK divided by 15"]
+  MEMSTATUS:
+    WBUSY:
+      _replace_enum:
+        NOT_BUSY: [0, "FLASH write operation not in progress"]
+        BUSY: [1, "FLASH write operation in progress"]
+    EBUSY:
+      _replace_enum:
+        NOT_BUSY: [0, "FLASH erase operation not in progress"]
+        BUSY: [1, "FLASH erase operation in progress"]
+    SE:
+      _replace_enum:
+        NO_FLAG: [0, "No ECC Single bit Error Flag"]
+        FLAG: [1, "ECC Single bit Error Flag Set"]
+    DE:
+      _replace_enum:
+        NO_FLAG: [0, "No ECC Dual bit Error Flag"]
+        FLAG: [1, "ECC Dual bit Error Flag Set"]
+    INVADDR:
+      _replace_enum:
+        NO_FLAG: [0, "No Invalid Memory Flag"]
+        FLAG: [1, "Invalid Memory Flag Set"]
+
+SCC:
+  CCSCTL:
+    CLKFAILIF:
+      _replace_enum:
+        NOT_SET: [0, "Int Flag Not Set"]
+        SET: [1, "Int Flag Set"]
+    SWRESET:
+      _replace_enum:
+        NOT_RESET: [0, "SW Reset Not Initiated"]
+        RESET: [1, "SW Reset Initiated"]
+    PCLKDIV:
+      _replace_enum:
+        HCLK_DIV_1: [0, "HCLK divided by 1"]
+        HCLK_DIV_2: [1, "HCLK divided by 2"]
+        HCLK_DIV_3: [2, "HCLK divided by 3"]
+        HCLK_DIV_4: [3, "HCLK divided by 4"]
+        HCLK_DIV_5: [4, "HCLK divided by 5"]
+        HCLK_DIV_6: [5, "HCLK divided by 6"]
+        HCLK_DIV_7: [6, "HCLK divided by 7"]
+    ACLKDIV:
+      _replace_enum:
+        SCLK_DIV_1: [0, "SCLK divided by 1"]
+        SCLK_DIV_2: [1, "SCLK divided by 2"]
+        SCLK_DIV_3: [2, "SCLK divided by 3"]
+        SCLK_DIV_4: [3, "SCLK divided by 4"]
+        SCLK_DIV_5: [4, "SCLK divided by 5"]
+        SCLK_DIV_6: [5, "SCLK divided by 6"]
+        SCLK_DIV_7: [6, "SCLK divided by 7"]
+    HCLKDIV:
+      _replace_enum:
+        SCLK_DIV_1: [0, "SCLK divided by 1"]
+        SCLK_DIV_2: [1, "SCLK divided by 2"]
+        SCLK_DIV_3: [2, "SCLK divided by 3"]
+        SCLK_DIV_4: [3, "SCLK divided by 4"]
+        SCLK_DIV_5: [4, "SCLK divided by 5"]
+        SCLK_DIV_6: [5, "SCLK divided by 6"]
+        SCLK_DIV_7: [6, "SCLK divided by 7"]
+  CCSPLLCTL:
+    PLLOUTDIV:
+      _replace_enum:
+        DIV_1: [0, "PLL output divided by 1"]
+        DIV_2: [1, "PLL output divided by 2"]
+        DIV_3: [2, "PLL output divided by 3"]
+        DIV_4: [3, "PLL output divided by 4"]
+    PLLLOCK:
+      _replace_enum:
+        NOT_LOCKED: [0, "PLL is not locked"]
+        LOCKED: [1, "PLL is locked"]

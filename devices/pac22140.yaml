@@ -1,1 +1,258 @@
 _svd: ../svd/pac22140.svd
+
+SYSCLK:
+  SCCTL:
+    ACLKDIV:
+      _replace_enum:
+        "FCLK_DIV_1": [0, "ACLK = FCLK /1"]
+        "FCLK_DIV_2": [1, "ACLK = FCLK /2"]
+        "FCLK_DIV_4": [2, "ACLK = FCLK /4"]
+        "FCLK_DIV_8": [3, "ACLK = FCLK /8"]
+        "FCLK_DIV_16": [4, "ACLK = FCLK /16"]
+        "FCLK_DIV_32": [5, "ACLK = FCLK /32"]
+        "FCLK_DIV_64": [6, "ACLK = FCLK /64"]
+        "FCLK_DIV_128": [7, "ACLK = FCLK /128"]
+    HCLKDIV:
+      _replace_enum:
+        "FCLK_DIV_1": [0, "HCLK = FCLK /1"]
+        "FCLK_DIV_2": [1, "HCLK = FCLK /2"]
+        "FCLK_DIV_4": [2, "HCLK = FCLK /4"]
+        "FCLK_DIV_8": [3, "HCLK = FCLK /8"]
+  PLLCTL:
+    PLLINDIV:
+      _replace_enum:
+        "DIV_2": [0, "PLL input divider: /2"]
+    PLLFBDIV:
+      _replace_enum:
+        "DIV_2": [0, "PLL feedback divider: /2"]
+    PLLOUTDIV:
+      _replace_enum:
+        "DIV_1": [1, "PLL output divider: /1"]
+  ROSCCTL:
+    ROSCP:
+      _replace_enum:
+        "MHZ_28_7": [0, "Set Ring Oscillator to 28.7 MHz"]
+        "MHZ_15_3": [1, "Set Ring Oscillator to 15.3 MHz"]
+        "MHZ_10_7": [2, "Set Ring Oscillator to 10.7 MHz"]
+        "MHZ_8_3": [3, "Set Ring Oscillator to 8.3 MHz"]
+
+WDT:
+  WDTCTL:
+    WDTCLKDIV:
+      _replace_enum:
+        "DIV_2": [0, "WDT clock divider: /2"]
+        "DIV_4": [1, "WDT clock divider: /4"]
+        "DIV_8": [2, "WDT clock divider: /8"]
+        "DIV_16": [3, "WDT clock divider: /16"]
+        "DIV_32": [4, "WDT clock divider: /32"]
+        "DIV_64": [5, "WDT clock divider: /64"]
+        "DIV_128": [6, "WDT clock divider: /128"]
+        "DIV_256": [7, "WDT clock divider: /256"]
+        "DIV_512": [8, "WDT clock divider: /512"]
+        "DIV_1024": [9, "WDT clock divider: /1024"]
+        "DIV_2048": [10, "WDT clock divider: /2048"]
+        "DIV_4096": [11, "WDT clock divider: /4096"]
+        "DIV_8192": [12, "WDT clock divider: /8192"]
+        "DIV_16384": [13, "WDT clock divider: /16384"]
+        "DIV_32768": [14, "WDT clock divider: /32768"]
+        "DIV_65536": [15, "WDT clock divider: /65536"]
+    WRBUSY:
+      _replace_enum:
+        NOT_BUSY: [0, "Watchdog timer register write not busy"]
+        BUSY: [1, "Watchdog timer register write busy"]
+
+RTC:
+  RTCCTL:
+    RTCCLKDIV:
+      _replace_enum:
+        DIV_2: [0, "Real-Time clock divider: /2"]
+        DIV_4: [1, "Real-Time clock divider: /4"]
+        DIV_8: [2, "Real-Time clock divider: /8"]
+        DIV_16: [3, "Real-Time clock divider: /16"]
+        DIV_32: [4, "Real-Time clock divider: /32"]
+        DIV_64: [5, "Real-Time clock divider: /64"]
+        DIV_128: [6, "Real-Time clock divider: /128"]
+        DIV_256: [7, "Real-Time clock divider: /256"]
+        DIV_512: [8, "Real-Time clock divider: /512"]
+        DIV_1024: [9, "Real-Time clock divider: /1024"]
+        DIV_2048: [10, "Real-Time clock divider: /2048"]
+        DIV_4096: [11, "Real-Time clock divider: /4096"]
+        DIV_8192: [12, "Real-Time clock divider: /8192"]
+        DIV_16384: [13, "Real-Time clock divider: /16384"]
+        DIV_32768: [14, "Real-Time clock divider: /32768"]
+        DIV_65536: [15, "Real-Time clock divider: /65536"]
+    WRBUSY:
+      _replace_enum:
+        "NOT_BUSY": [0, "RTC register write not busy"]
+        "BUSY": [1, "RTC register write busy"]
+
+GPIOA:
+  PSEL:
+    "P*":
+      _replace_enum:
+        IO: [0, "Port in I/O mode"]
+        PERIPHERAL_1: [1, "Peripheral Configuration 1"]
+        PERIPHERAL_2: [2, "Peripheral Configuration 2"]
+        PERIPHERAL_3: [3, "Peripheral Configuration 3"]
+
+"TIMER*":
+  TxCTL:
+    CLKDIV:
+      _replace_enum:
+        DIV_1: [0, "divide by 1"]
+        DIV_2: [1, "divide by 2"]
+        DIV_4: [2, "divide by 4"]
+        DIV_8: [3, "divide by 8"]
+        DIV_16: [4, "divide by 16"]
+        DIV_32: [5, "divide by 32"]
+        DIV_64: [6, "divide by 64"]
+        DIV_128: [7, "divide by 128"]
+  "TxCC*CTL":
+    CCMODE:
+      _replace_enum:
+        COMPARE_MODE: [0, "compare mode"]
+        CAPTURE_MODE: [1, "capture mode"]
+
+ADC:
+  EMUXCTL:
+    EMUXCDIV:
+      _replace_enum:
+        FCLK_DIV_1: [0, "FCLK divided by 1"]
+        FCLK_DIV_2: [1, "FCLK divided by 2"]
+        FCLK_DIV_3: [2, "FCLK divided by 3"]
+        FCLK_DIV_4: [3, "FCLK divided by 4"]
+        FCLK_DIV_5: [4, "FCLK divided by 5"]
+        FCLK_DIV_6: [5, "FCLK divided by 6"]
+        FCLK_DIV_7: [6, "FCLK divided by 7"]
+        FCLK_DIV_8: [7, "FCLK divided by 8"]
+    EMUXDONE:
+      _replace_enum:
+        BUSY: [0, "ADC External MUX busy"]
+        DATA_SENT: [1, "ADC External MUX data sent"]
+    EMUXBUSY:
+      _replace_enum:
+        BUSY: [0, "ADC External MUX busy"]
+        NOT_BUSY: [1, "ADC External MUX not busy"]
+  ADCCTL:
+    ADCCDIV:
+      _replace_enum:
+        FCLK_DIV_1: [0, "FCLK divided by 1"]
+        FCLK_DIV_2: [1, "FCLK divided by 2"]
+        FCLK_DIV_3: [2, "FCLK divided by 3"]
+        FCLK_DIV_4: [3, "FCLK divided by 4"]
+        FCLK_DIV_5: [4, "FCLK divided by 5"]
+        FCLK_DIV_6: [5, "FCLK divided by 6"]
+        FCLK_DIV_7: [6, "FCLK divided by 7"]
+        FCLK_DIV_8: [7, "FCLK divided by 8"]
+    ADCBUSY:
+      _replace_enum:
+        NO_OPERATION: [0, "ADC not busy"]
+        BUSY: [1, "ADC conversion or auto sequencer active"]
+  "AS*CTL":
+    ASAxTRTMR:
+      _replace_enum:
+        TIMER_A: [0, "Timer A"]
+        TIMER_B: [1, "Timer B"]
+        TIMER_C: [2, "Timer C"]
+        TIMER_D: [3, "Timer D"]
+    ASxBUSY:
+      _replace_enum:
+        NOT_BUSY: [0, "auto sequencer not active"]
+        BUSY: [1, "auto sequencer sampling active"]
+
+I2C:
+  I2CCFG:
+    ADDRMODE:
+      _replace_enum:
+        MODE_7_BIT: [0, "7-bit addressing"]
+        MODE_10_BIT: [1, "10-bit addressing"]
+  I2CINT:
+    MATXE:
+      _replace_enum:
+        NOT_TRANSMITTED: [0, "MATXDATA not transmitted since last read of I2CINT"]
+        TRANSMITTED: [1, "MATXDATA transmitted to I2C bus, clears on read"]
+  I2CMACTL:
+    I2CMACTLF:
+      _replace_enum:
+        NOT_FULL: [0, "I2CMACTL processed, write allowed"]
+        FULL: [1, "I2CMACTL full, write not allowed, cleared on read"]
+
+UART:
+  UARTII:
+    UARTINTID:
+      _replace_enum:
+        MODEM_STATUS: [0, "modem status"]
+        TX_HOLD_REG_EMPTY: [1, "TX hold register empty"]
+        RX_DATA_AVAILABLE: [2, "RX data available"]
+        RX_LINE_STATUS: [3, "RX line status"]
+        TIMEOUT: [4, "Timeout"]
+  UARTLS:
+    RXDR:
+      _replace_enum:
+        EMPTY: [0, "RX FIFO empty"]
+        NOT_EMPTY: [1, "At least one entry in RX FIFO"]
+    RXE:
+      _replace_enum:
+        NO_ERROR: [0, "no error in RX FIFO"]
+        ERROR: [1, "At least one parity, framing or break error active in FIFO"]
+  UARTFCTL:
+    RXFRESET:
+      _replace_enum:
+        NO_ACTION: [0, "no action"]
+        CLEAR: [1, "clear RX FIFO, cleared on read"]
+    TXFRESET:
+      _replace_enum:
+        NO_ACTION: [0, "no action"]
+        CLEAR: [1, "clear TX FIFO, cleared on read"]
+  UARTFSTAT:
+    TXFE:
+      _replace_enum:
+        NOT_EMPTY: [0, "TX FIFO not empty"]
+        EMPTY: [1, "TX FIFO empty"]
+    TXFF:
+      _replace_enum:
+        NOT_FULL: [0, "TX FIFO not full"]
+        FULL: [1, "TX FIFO full"]
+    RXFE:
+      _replace_enum:
+        NOT_EMPTY: [0, "RX FIFO not empty"]
+        EMPTY: [1, "RX FIFO empty"]
+    RXFF:
+      _replace_enum:
+        NOT_FULL: [0, "RX FIFO not full"]
+        FULL: [1, "RX FIFO full"]
+
+SOCB:
+  SOCBCTL:
+    MTRARM:
+      _replace_enum:
+        RE_ARM: [1, "re-arms the SOCBCTL.MTRANS operation by de-asserting CSx chip select and returning the master mode state machine to IDLE."]
+  SOCBSTAT:
+    CYC_DONE:
+      _replace_enum:
+        NOT_DONE: [0, "No cycle done detected since this bit was cleared"]
+        COMPELTED: [1, "Cycle done detected, write one to clear"]
+    TXFULL:
+      _replace_enum:
+        READY: [0, "TX transmit holding register ready to accept data word"]
+        NOT_READY: [1, "TX transmit holding register in use and not ready"]
+
+SPI:
+  SPICTL:
+    MTRARM:
+      _replace_enum:
+        RE_ARM: [1, "re-arms the SOCBCTL.MTRANS operation by de-asserting CSx chip select and returning the master mode state machine to IDLE."]
+  SPISTAT:
+    CYC_DONE:
+      _replace_enum:
+        NOT_DONE: [0, "No cycle done detected since this bit was cleared"]
+        COMPELTED: [1, "Cycle done detected, write one to clear"]
+    TXFULL:
+      _replace_enum:
+        READY: [0, "TX transmit holding register ready to accept data word"]
+        NOT_READY: [1, "TX transmit holding register in use and not ready"]
+  SPICSSTR:
+    CSL:
+      _replace_enum:
+        ACTIVE_LOW: [0, "Active-low outgoing (master) or incoming (slave) chip select"]
+        ACTIVE_HIGH: [1, "Active-high outgoing (master) or incoming (slave) ship select"]
