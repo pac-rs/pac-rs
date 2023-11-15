@@ -9122,7 +9122,7 @@
                   <name>ROSC</name>
                   <description>ROSC selected as input to FRCLK</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CLKREF</name>
@@ -9682,7 +9682,7 @@
                   <name>GPIOA0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
               </enumeratedValues>              
             </field>   
@@ -9696,7 +9696,7 @@
                   <name>GPIOA1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>EMUXD</name>
@@ -9715,7 +9715,7 @@
                   <name>GPIOA2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>EMUXC</name>
@@ -9734,7 +9734,7 @@
                   <name>GPIOA3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>USASCLK</name>
@@ -9758,7 +9758,7 @@
                   <name>GPIOA4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>USAMOSI</name>
@@ -9782,7 +9782,7 @@
                   <name>GPIOA5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                <enumeratedValue>
                   <name>USAMISO</name>
@@ -9806,7 +9806,7 @@
                   <name>GPIOA6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>USASS</name>
@@ -9830,7 +9830,7 @@
                   <name>GPIOA7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
               </enumeratedValues>              
             </field>   
@@ -9854,7 +9854,7 @@
                   <name>GPIOB0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM0</name>
@@ -9888,7 +9888,7 @@
                   <name>GPIOB1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM1</name>
@@ -9922,7 +9922,7 @@
                   <name>GPIOB2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM2</name>
@@ -9956,7 +9956,7 @@
                   <name>GPIOB3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM3</name>
@@ -9990,7 +9990,7 @@
                   <name>GPIOB4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM4</name>
@@ -10029,7 +10029,7 @@
                   <name>GPIOB5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM5</name>
@@ -10068,7 +10068,7 @@
                   <name>GPIOB6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM6</name>
@@ -10107,7 +10107,7 @@
                   <name>GPIOB7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TAPWM7</name>
@@ -10156,7 +10156,7 @@
                   <name>GPIOC0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM0</name>
@@ -10205,7 +10205,7 @@
                   <name>GPIOC1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM1</name>
@@ -10254,7 +10254,7 @@
                   <name>GPIOC2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM2</name>
@@ -10298,7 +10298,7 @@
                   <name>GPIOC3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM3</name>
@@ -10337,7 +10337,7 @@
                   <name>GPIOC4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM4</name>
@@ -10386,7 +10386,7 @@
                   <name>GPIOC5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM5</name>
@@ -10435,7 +10435,7 @@
                   <name>GPIOC6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM6</name>
@@ -10479,7 +10479,7 @@
                   <name>GPIOC7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM7</name>
@@ -10534,7 +10534,7 @@
                   <name>GPIOD0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM0</name>
@@ -10578,7 +10578,7 @@
                   <name>GPIOD1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM1</name>
@@ -10622,7 +10622,7 @@
                   <name>GPIOD2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM2</name>
@@ -10656,7 +10656,7 @@
                   <name>GPIOD3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM3</name>
@@ -10695,7 +10695,7 @@
                   <name>GPIOD4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM4</name>
@@ -10744,7 +10744,7 @@
                   <name>GPIOD5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM5</name>
@@ -10793,7 +10793,7 @@
                   <name>GPIOD6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM6</name>
@@ -10842,7 +10842,7 @@
                   <name>GPIOD7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TBPWM7</name>
@@ -10892,7 +10892,7 @@
                   <name>GPIOE0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM4</name>
@@ -10941,7 +10941,7 @@
                   <name>GPIOE1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM5</name>
@@ -10990,7 +10990,7 @@
                   <name>GPIOE2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM6</name>
@@ -11039,7 +11039,7 @@
                   <name>GPIOE3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM7</name>
@@ -11078,7 +11078,7 @@
                   <name>GPIOE4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM4</name>
@@ -11122,7 +11122,7 @@
                   <name>GPIOE5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM5</name>
@@ -11166,7 +11166,7 @@
                   <name>GPIOE6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM6</name>
@@ -11210,7 +11210,7 @@
                   <name>GPIOE7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM7</name>
@@ -11260,7 +11260,7 @@
                   <name>GPIOF0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM0</name>
@@ -11309,7 +11309,7 @@
                   <name>GPIOF1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM1</name>
@@ -11358,7 +11358,7 @@
                   <name>GPIOF2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM2</name>
@@ -11407,7 +11407,7 @@
                   <name>GPIOF3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM3</name>
@@ -11456,7 +11456,7 @@
                   <name>GPIOF4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM4</name>
@@ -11500,7 +11500,7 @@
                   <name>GPIOF5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM5</name>
@@ -11539,7 +11539,7 @@
                   <name>GPIOF6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM6</name>
@@ -11583,7 +11583,7 @@
                   <name>GPIOF7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM7</name>
@@ -11633,7 +11633,7 @@
                   <name>GPIOG0</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM0</name>
@@ -11677,7 +11677,7 @@
                   <name>GPIOG1</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM1</name>
@@ -11721,7 +11721,7 @@
                   <name>GPIOG2</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM2</name>
@@ -11765,7 +11765,7 @@
                   <name>GPIOG3</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM3</name>
@@ -11799,7 +11799,7 @@
                   <name>GPIOG4</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM4</name>
@@ -11848,7 +11848,7 @@
                   <name>GPIOG5</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM5</name>
@@ -11892,7 +11892,7 @@
                   <name>GPIOG6</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TCPWM6</name>
@@ -11936,7 +11936,7 @@
                   <name>GPIOG7</name>
                   <description>GPIO selected</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>TDQEPIDX</name>

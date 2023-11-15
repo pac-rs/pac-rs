@@ -67,7 +67,7 @@
                   <name>ROSC</name>
                   <description>Internal Ring Oscillator</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>CLKREF</name>
@@ -96,7 +96,7 @@
                   <name>FCLK /1</name>
                   <description>ACLK = FCLK /1</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>FCLK /2</name>
@@ -145,7 +145,7 @@
                   <name>FCLK /1</name>
                   <description>HCLK = FCLK /1</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>FCLK /2</name>
@@ -174,7 +174,7 @@
                   <name>FRCLK</name>
                   <description>FCLK = FRCLK</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>PLLOUT</name>
@@ -200,7 +200,7 @@
                   <name>disable</name>
                   <description>Disable PLL</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>enable</name>
@@ -219,7 +219,7 @@
                   <name>/2</name>
                   <description>PLL input divider: /2</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
               </enumeratedValues>
             </field>
@@ -233,7 +233,7 @@
                   <name>/2</name>
                   <description>PLL feedback divider: /2</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
               </enumeratedValues>
             </field>
@@ -247,7 +247,7 @@
                   <name>/1</name>
                   <description>PLL output divider: /1</description>
                   <value>1</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
               </enumeratedValues>
             </field>
@@ -269,7 +269,7 @@
                   <name>disable</name>
                   <description>Disable Ring Oscillator</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>enable</name>
@@ -288,7 +288,7 @@
                   <name>28.7 MHz</name>
                   <description>Set Ring Oscillator to 28.7 MHz</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>15.3 MHz</name>
@@ -324,7 +324,7 @@
                   <name>disable</name>
                   <description>Disable XTAL Driver</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>enable</name>
@@ -371,7 +371,7 @@
                   <name>inactive</name>
                   <description>Buffered write inactive</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>active</name>
@@ -390,7 +390,7 @@
                   <name>inactive</name>
                   <description>Page erase finished or no page erase in progress</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>active</name>
@@ -431,7 +431,7 @@
                   <name>0</name>
                   <description>0 FLASH wait states</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>1</name>
@@ -502,7 +502,7 @@
                   <name>disabled</name>
                   <description>Watchdog timer interval interrupt disabled</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>enabled</name>
@@ -522,7 +522,7 @@
                   <name>clear</name>
                   <description>Watchdog timer interrupt flag clear</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>set</name>
@@ -541,7 +541,7 @@
                   <name>disabled</name>
                   <description>Watchdog timer device reset disabled</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>enabled</name>
@@ -560,7 +560,7 @@
                   <name>/2</name>
                   <description>WDT clock divider: /2</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>/4</name>
@@ -649,7 +649,7 @@
                   <name>FRCLK</name>
                   <description>Watchdog timer input clock: FRCLK</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>FCLK</name>
@@ -669,7 +669,7 @@
                   <name>not busy</name>
                   <description>Watchdog timer register write not busy</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>busy</name>
@@ -758,7 +758,7 @@
                   <name>disabled</name>
                   <description>Real-Time Clock interrupt disable</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>enabled</name>
@@ -778,7 +778,7 @@
                   <name>clear</name>
                   <description>Real-Time Clock interrupt flag clear</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>set</name>
@@ -797,7 +797,7 @@
                   <name>/2</name>
                   <description>Real-Time clock divider: /2</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>/4</name>
@@ -887,7 +887,7 @@
                   <name>not busy</name>
                   <description>RTC register write not busy</description>
                   <value>0</value>
-                  <isDefault>true</isDefault>
+                  <isDefault>1.0</isDefault>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>busy</name>
