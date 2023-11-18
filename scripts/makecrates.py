@@ -36,7 +36,7 @@ name = "{crate}"
 version = "{version}"
 authors = ["Liam Kinne <liam@kinne.io>"]
 description = "Device support crates for {family} devices"
-repository = "https://github.com/team-arrow-racing/qorvo-pac-rs"
+repository = "https://github.com/pac-rs/pac-rs"
 readme = "README.md"
 keywords = ["qorvo", "svd2rust", "no_std", "embedded"]
 categories = ["embedded", "no-std"]
@@ -71,7 +71,7 @@ SRC_LIB_RS_TPL = """\
 //! [svd2rust/#peripheral-api](https://docs.rs/svd2rust/{svd2rust_version}/svd2rust/#peripheral-api)
 //!
 //! For more details see the README here:
-//! [qorvo-pac-rs](https://github.com/team-arrow-racing/qorvo-pac-rs)
+//! [qorvo-pac-rs](https://github.com/pac-rs/pac-rs)
 //!
 //! This crate supports all {family} devices; for the complete list please
 //! see:
@@ -99,7 +99,7 @@ extensive type-safe support. For more information please see the [main repo].
 Refer to the [documentation] for full details.
 
 [svd2rust]: https://github.com/rust-embedded/svd2rust
-[main repo]: https://github.com/team-arrow-racing/qorvo-pac-rs
+[main repo]: https://github.com/pac-rs/pac-rs
 [documentation]: https://docs.rs/{crate}/latest/{crate}/
 
 ## Usage
