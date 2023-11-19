@@ -561,7 +561,7 @@ _svd: ../svd/pac25140.svd
         bitWidth: 1
         access: write
 
-  DOSET:
+  DOCLEAR:
     _add:
       P0:
         description: Pin 0 Data Output Clear
