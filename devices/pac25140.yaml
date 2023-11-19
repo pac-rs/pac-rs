@@ -604,6 +604,101 @@ _svd: ../svd/pac25140.svd
         bitWidth: 1
         access: write
 
+SCC:
+  "P*PUEN":
+    _add:
+      P0:
+        description: Pin 0 Weak Pull-up Enabled
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Weak Pull-up Enabled
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Weak Pull-up Enabled
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Weak Pull-up Enabled
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Weak Pull-up Enabled
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Weak Pull-up Enabled
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Weak Pull-up Enabled
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Weak Pull-up Enabled
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      ENABLE: [0, "Enable"]
+      DISABLE: [1, "Disable"]
+
+  "P*PDEN":
+    _add:
+      P0:
+        description: Pin 0 Weak Pull-down Enabled
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Weak Pull-down Enabled
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Weak Pull-down Enabled
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Weak Pull-down Enabled
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Weak Pull-down Enabled
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Weak Pull-down Enabled
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Weak Pull-down Enabled
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Weak Pull-down Enabled
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      ENABLE: [0, "Enable"]
+      DISABLE: [1, "Disable"]
+
 "Timer*":
   CTL:
     MODE:
