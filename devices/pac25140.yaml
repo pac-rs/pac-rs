@@ -1,5 +1,609 @@
 _svd: ../svd/pac25140.svd
 
+"GPIO*":
+  MODE:
+    _add:
+      P0:
+        description: Pin 0
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      P1:
+        description: Pin 2
+        bitOffset: 2
+        bitWidth: 4
+        access: read-write
+      P2:
+        description: Pin 3
+        bitOffset: 4
+        bitWidth: 2
+        access: read-write
+      P3:
+        description: Pin 4
+        bitOffset: 6
+        bitWidth: 2
+        access: read-write
+      P4:
+        description: Pin 0
+        bitOffset: 8
+        bitWidth: 2
+        access: read-write
+      P5:
+        description: Pin 5
+        bitOffset: 10
+        bitWidth: 4
+        access: read-write
+      P6:
+        description: Pin 6
+        bitOffset: 12
+        bitWidth: 2
+        access: read-write
+      P7:
+        description: Pin 7
+        bitOffset: 14
+        bitWidth: 2
+        access: read-write
+
+    "P*":
+      _replace_enum:
+        PUSH_PULL: [1, "Push-Pull Output"]
+        OPEN_DRAIN: [2, "Push-Pull Output"]
+        INPUT: [3, "High-Impedence Input"]
+
+  OUTMASK:
+    _add:
+      P0:
+        description: Pin 0 Output Data Mask
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Output Data Mask
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Output Data Mask
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Output Data Mask
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Output Data Mask
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Output Data Mask
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Output Data Mask
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Output Data Mask
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      _replace_enum:
+        NOT_MASKED: [0, "Not Masked"]
+        MASKED: [1, "Masked"]
+
+  OUT:
+    _add:
+      P0:
+        description: Pin 0 Output Data Value
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Output Data Value
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Output Data Value
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Output Data Value
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Output Data Value
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Output Data Value
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Output Data Value
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Output Data Value
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+  IN:
+    _add:
+      P0:
+        description: Pin 0 Input Data Value
+        bitOffset: 0
+        bitWidth: 1
+        access: read
+      P1:
+        description: Pin 1 Input Data Value
+        bitOffset: 1
+        bitWidth: 1
+        access: read
+      P2:
+        description: Pin 2 Input Data Value
+        bitOffset: 2
+        bitWidth: 1
+        access: read
+      P3:
+        description: Pin 3 Input Data Value
+        bitOffset: 3
+        bitWidth: 1
+        access: read
+      P4:
+        description: Pin 4 Input Data Value
+        bitOffset: 4
+        bitWidth: 1
+        access: read
+      P5:
+        description: Pin 5 Input Data Value
+        bitOffset: 5
+        bitWidth: 1
+        access: read
+      P6:
+        description: Pin 6 Input Data Value
+        bitOffset: 6
+        bitWidth: 1
+        access: read
+      P7:
+        description: Pin 7 Input Data Value
+        bitOffset: 7
+        bitWidth: 1
+        access: read
+
+  INTEN:
+    _add:
+      P0:
+        description: Pin 0 Interrupt Enable
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Interrupt Enable
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Interrupt Enable
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Interrupt Enable
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Interrupt Enable
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Interrupt Enable
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Interrupt Enable
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Interrupt Enable
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      DISABLE: [0, "Disable"]
+      ENABLE: [1, "Enable"]
+
+  INTFLAGRAW:
+    _add:
+      P0:
+        description: Pin 0 Interrupt Flag
+        bitOffset: 0
+        bitWidth: 1
+        access: read
+      P1:
+        description: Pin 1 Interrupt Flag
+        bitOffset: 1
+        bitWidth: 1
+        access: read
+      P2:
+        description: Pin 2 Interrupt Flag
+        bitOffset: 2
+        bitWidth: 1
+        access: read
+      P3:
+        description: Pin 3 Interrupt Flag
+        bitOffset: 3
+        bitWidth: 1
+        access: read
+      P4:
+        description: Pin 4 Interrupt Flag
+        bitOffset: 4
+        bitWidth: 1
+        access: read
+      P5:
+        description: Pin 5 Interrupt Flag
+        bitOffset: 5
+        bitWidth: 1
+        access: read
+      P6:
+        description: Pin 6 Interrupt Flag
+        bitOffset: 6
+        bitWidth: 1
+        access: read
+      P7:
+        description: Pin 7 Interrupt Flag
+        bitOffset: 7
+        bitWidth: 1
+        access: read
+
+    "P*":
+      NO_EFFECT: [0, "No Effect"]
+      CLEAR: [1, "Clear"]
+
+  INTCLEAR:
+    _add:
+      P0:
+        description: Pin 0 Interrupt Clear
+        bitOffset: 0
+        bitWidth: 1
+        access: write
+      P1:
+        description: Pin 1 Interrupt Clear
+        bitOffset: 1
+        bitWidth: 1
+        access: write
+      P2:
+        description: Pin 2 Interrupt Clear
+        bitOffset: 2
+        bitWidth: 1
+        access: write
+      P3:
+        description: Pin 3 Interrupt Clear
+        bitOffset: 3
+        bitWidth: 1
+        access: write
+      P4:
+        description: Pin 4 Interrupt Clear
+        bitOffset: 4
+        bitWidth: 1
+        access: write
+      P5:
+        description: Pin 5 Interrupt Clear
+        bitOffset: 5
+        bitWidth: 1
+        access: write
+      P6:
+        description: Pin 6 Interrupt Clear
+        bitOffset: 6
+        bitWidth: 1
+        access: write
+      P7:
+        description: Pin 7 Interrupt Clear
+        bitOffset: 7
+        bitWidth: 1
+        access: write
+
+    "P*":
+      NO_FLAG: [0, "No Flag"]
+      FLAG: [1, "Flag"]
+
+  INTTYPE:
+    _add:
+      P0:
+        description: Pin 0 Interrupt Type
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Interrupt Type
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Interrupt Type
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Interrupt Type
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Interrupt Type
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Interrupt Type
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Interrupt Type
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Interrupt Type
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      EDGE_TRIGGERED: [0, "Edge Triggered"]
+      LEVEL_TRIGGERED: [1, "Level Triggered"]
+
+  INTVALUE:
+    _add:
+      P0:
+        description: Pin 0 Interrupt Value Configuration
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Interrupt Value Configuration
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Interrupt Value Configuration
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Interrupt Value Configuration
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Interrupt Value Configuration
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Interrupt Value Configuration
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Interrupt Value Configuration
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Interrupt Value Configuration
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      FALLING_EDGE_LOGIC_LOW: [0, "Falling Edge / Logic Low"]
+      RISING_EDGE_LOGIC_HIGH: [1, "Rising Edge / Logic High"]
+
+  INTEDGEBOTH:
+    _add:
+      P0:
+        description: Pin 0 Interrupt Both Edge Configuration
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Interrupt Both Edge Configuration
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Interrupt Both Edge Configuration
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Interrupt Both Edge Configuration
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Interrupt Both Edge Configuration
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Interrupt Both Edge Configuration
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Interrupt Both Edge Configuration
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Interrupt Both Edge Configuration
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      AS_CONFIGURED: [0, "Trigger on edge configured in INTVALUE"]
+      BOTH_EDGES: [1, "Trigger on both rising and falling edge"]
+
+  _modify:
+    DEBOUNCE:
+      name: CLKSYNC
+      description: GPIO Clock Synchronization Enable
+
+  CLKSYNC:
+    _add:
+      P0:
+        description: Pin 0 Clock Synchronization
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      P1:
+        description: Pin 1 Clock Synchronization
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      P2:
+        description: Pin 2 Clock Synchronization
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      P3:
+        description: Pin 3 Clock Synchronization
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P4:
+        description: Pin 4 Clock Synchronization
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+      P5:
+        description: Pin 5 Clock Synchronization
+        bitOffset: 5
+        bitWidth: 1
+        access: read-write
+      P6:
+        description: Pin 6 Clock Synchronization
+        bitOffset: 6
+        bitWidth: 1
+        access: read-write
+      P7:
+        description: Pin 7 Clock Synchronization
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+
+    "P*":
+      DISABLE: [0, "Disable"]
+      ENABLE: [1, "Enable (set when receive interrupts enabled)"]
+
+  DOSET:
+    _add:
+      P0:
+        description: Pin 0 Data Output Set
+        bitOffset: 0
+        bitWidth: 1
+        access: write
+      P1:
+        description: Pin 1 Data Output Set
+        bitOffset: 1
+        bitWidth: 1
+        access: write
+      P2:
+        description: Pin 2 Data Output Set
+        bitOffset: 2
+        bitWidth: 1
+        access: write
+      P3:
+        description: Pin 3 Data Output Set
+        bitOffset: 3
+        bitWidth: 1
+        access: write
+      P4:
+        description: Pin 4 Data Output Set
+        bitOffset: 4
+        bitWidth: 1
+        access: write
+      P5:
+        description: Pin 5 Data Output Set
+        bitOffset: 5
+        bitWidth: 1
+        access: write
+      P6:
+        description: Pin 6 Data Output Set
+        bitOffset: 6
+        bitWidth: 1
+        access: write
+      P7:
+        description: Pin 7 Data Output Set
+        bitOffset: 7
+        bitWidth: 1
+        access: write
+
+  DOSET:
+    _add:
+      P0:
+        description: Pin 0 Data Output Clear
+        bitOffset: 0
+        bitWidth: 1
+        access: write
+      P1:
+        description: Pin 1 Data Output Clear
+        bitOffset: 1
+        bitWidth: 1
+        access: write
+      P2:
+        description: Pin 2 Data Output Clear
+        bitOffset: 2
+        bitWidth: 1
+        access: write
+      P3:
+        description: Pin 3 Data Output Clear
+        bitOffset: 3
+        bitWidth: 1
+        access: write
+      P4:
+        description: Pin 4 Data Output Clear
+        bitOffset: 4
+        bitWidth: 1
+        access: write
+      P5:
+        description: Pin 5 Data Output Clear
+        bitOffset: 5
+        bitWidth: 1
+        access: write
+      P6:
+        description: Pin 6 Data Output Clear
+        bitOffset: 6
+        bitWidth: 1
+        access: write
+      P7:
+        description: Pin 7 Data Output Clear
+        bitOffset: 7
+        bitWidth: 1
+        access: write
+
 "Timer*":
   CTL:
     MODE:
