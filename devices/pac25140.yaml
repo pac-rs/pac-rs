@@ -699,6 +699,104 @@ SCC:
       ENABLE: [0, "Enable"]
       DISABLE: [1, "Disable"]
 
+  "P*DS":
+    _add:
+      P0DS:
+        description: Pin 0 Drive Strength
+        bitOffset: 0
+        bitWidth: 3
+        access: read-write
+      P0ST:
+        description: Pin 0 Schmitt Trigger Enable
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      P1DS:
+        description: Pin 1 Drive Strength
+        bitOffset: 4
+        bitWidth: 3
+        access: read-write
+      P1ST:
+        description: Pin 1 Schmitt Trigger Enable
+        bitOffset: 7
+        bitWidth: 1
+        access: read-write
+      P2DS:
+        description: Pin 2 Drive Strength
+        bitOffset: 8
+        bitWidth: 3
+        access: read-write
+      P2ST:
+        description: Pin 2 Schmitt Trigger Enable
+        bitOffset: 11
+        bitWidth: 1
+        access: read-write
+      P3DS:
+        description: Pin 3 Drive Strength
+        bitOffset: 12
+        bitWidth: 3
+        access: read-write
+      P3ST:
+        description: Pin 3 Schmitt Trigger Enable
+        bitOffset: 15
+        bitWidth: 1
+        access: read-write
+      P4DS:
+        description: Pin 4 Drive Strength
+        bitOffset: 16
+        bitWidth: 3
+        access: read-write
+      P4ST:
+        description: Pin 4 Schmitt Trigger Enable
+        bitOffset: 19
+        bitWidth: 1
+        access: read-write
+      P5DS:
+        description: Pin 5 Drive Strength
+        bitOffset: 20
+        bitWidth: 3
+        access: read-write
+      P5ST:
+        description: Pin 5 Schmitt Trigger Enable
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      P6DS:
+        description: Pin 6 Drive Strength
+        bitOffset: 24
+        bitWidth: 3
+        access: read-write
+      P6ST:
+        description: Pin 6 Schmitt Trigger Enable
+        bitOffset: 27
+        bitWidth: 1
+        access: read-write
+      P7DS:
+        description: Pin 7 Drive Strength
+        bitOffset: 28
+        bitWidth: 3
+        access: read-write
+      P7ST:
+        description: Pin 7 Schmitt Trigger Enable
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+
+    "P*DS":
+      6mA: [0, "6mA"]
+      8mA: [1, "8mA"]
+      11mA: [2, "11mA"]
+      14mA: [3, "14mA"]
+      17mA: [4, "17mA"]
+      20mA: [5, "20mA"]
+      22mA: [6, "22mA"]
+      25mA: [7, "25mA"]
+
+    "P*ST":
+      DISABLE: [0, "Disable"]
+      ENABLE: [1, "Enable"]
+
+
 "Timer*":
   CTL:
     MODE:
