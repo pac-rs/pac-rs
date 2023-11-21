@@ -1,5 +1,328 @@
 _svd: ../svd/pac25140.svd
 
+CAN:
+  _delete:
+    - ISR_SR_CMR_MR
+    - BTR1_BTR0_RMC_IMR
+    - ALC_TXERR_RXERR_ECC
+  _add:
+    CANMR:
+      description: CAN Mode Register
+      addressOffset: 0x00
+      access: read-write
+      resetValue: 0x04
+      fields:
+        AFM:
+          description: Hardware acceptance filter scheme. This register may only be written in reset mode.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        LOM:
+          description: Listen only mode. This register may only be written in reset mode.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        RM:
+          description: Reset mode.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+    CANCMR:
+      description: CAN Command Register
+      addressOffset: 0x01
+      access: read-write
+      fields:
+        AT:
+          description: Abort transmission.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        TR:
+          description: Transmit request.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+    CANSR:
+      description: CAN Status Register
+      addressOffset: 0x02
+      access: read-write
+      fields:
+        BS:
+          description: Bus Off Status.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-only
+        ES:
+          description: Error Status.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-only
+        TS:
+          description: Transmit Status.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-only
+        RS:
+          description: Receive Status.
+          bitOffset: 3
+          bitWidth: 1
+          access: read-only
+        TBS:
+          description: Transmit Buffer Status.
+          bitOffset: 5
+          bitWidth: 1
+          access: read-only
+        DSO:
+          description: Data Overrun Status.
+          bitOffset: 6
+          bitWidth: 1
+          access: read-only
+        RBS:
+          description: Receive Buffer Status.
+          bitOffset: 7
+          bitWidth: 1
+          access: read-only
+    CANISR:
+      description: CAN Interrupt Status/ACK Register
+      addressOffset: 0x03
+      access: read-write
+      fields:
+        DOI:
+          description: Data Overflow Interrupt.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        BEI:
+          description: Bus Error Interrupt.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        TI:
+          description: Transmit Interrupt.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+        RI:
+          description: Receive Interrupt.
+          bitOffset: 3
+          bitWidth: 1
+          access: read-write
+        EPI:
+          description: Error Passive Interrupt.
+          bitOffset: 4
+          bitWidth: 1
+          access: read-write
+        EWI:
+          description: Error Warning Interrupt.
+          bitOffset: 5
+          bitWidth: 1
+          access: read-write
+        ALI:
+          description: Arbitration Lost Interrupt.
+          bitOffset: 6
+          bitWidth: 1
+          access: read-write
+    CANIMR:
+      description: CAN Interrupt Mask Register
+      addressOffset: 0x04
+      access: read-write
+      fields:
+        DOIM:
+          description: Data Overflow Interrupt Mask.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        BEIM:
+          description: Bus Error Interrupt Mask.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        TIM:
+          description: Transmit Interrupt Mask.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+        RIM:
+          description: Receive Interrupt Mask.
+          bitOffset: 3
+          bitWidth: 1
+          access: read-write
+        EPIM:
+          description: Error Passive Interrupt Mask.
+          bitOffset: 4
+          bitWidth: 1
+          access: read-write
+        EWIM:
+          description: Error Warning Interrupt Mask.
+          bitOffset: 5
+          bitWidth: 1
+          access: read-write
+        ALIM:
+          description: Arbitration Lost Interrupt Mask.
+          bitOffset: 6
+          bitWidth: 1
+          access: read-write
+    CANRMC:
+      description: CAN Receive Message Counter Register
+      addressOffset: 0x05
+      access: read-write
+      fields:
+        RMC:
+          description: Number of frames stored in the receive FIFO.
+          bitOffset: 0
+          bitWidth: 5
+          access: read-write
+    CANBTR0:
+      description: CAN Bus Timing 0 Register
+      addressOffset: 0x06
+      access: read-write
+      fields:
+        BRP:
+          description: Baud Rate Pre-scaler.
+          bitOffset: 0
+          bitWidth: 6
+          access: read-write
+        SJW:
+          description: Synchronization jump width.
+          bitOffset: 7
+          bitWidth: 2
+          access: read-write
+    CANBTR1:
+      description: CAN Bus Timing 1 Register
+      addressOffset: 0x07
+      access: read-write
+      fields:
+        TSEG1:
+          description: Number of clock cycles per Time Segment 1.
+          bitOffset: 0
+          bitWidth: 4
+          access: read-write
+        TSEG2:
+          description: Number of clock cycles per Time Segment 2.
+          bitOffset: 4
+          bitWidth: 3
+          access: read-write
+        SAM:
+          description: Number of bus level samples.
+          bitOffset: 7
+          bitWidth: 1
+          access: read-write
+    CANTXBUF:
+      description: CAN Transmit Buffer Register
+      addressOffset: 0x08
+      access: read-write
+      fields:
+        TXBUF:
+          description: Transmit Buffer Data.
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CANRXBUF:
+      description: CAN Receive Buffer Register
+      addressOffset: 0x0C
+      access: read-write
+      fields:
+        TXBUF:
+          description: Receive Buffer Data.
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CANACR:
+      description: CAN Acceptance Code Register
+      addressOffset: 0x10
+      access: read-write
+      fields:
+        ACR:
+          description: Acceptance Code.
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write'
+    CANAMR:
+      description: CAN Acceptance Code Mask Register
+      addressOffset: 0x14
+      access: read-write
+      fields:
+        AMR:
+          description: Acceptance Code Mask.
+          bitOffset: 0
+          bitWidth: 32
+          access: read-write
+    CANECC:
+      description: CAN Error Code Capture Register
+      addressOffset: 0x18
+      access: read-write
+      fields:
+        BER:
+          description: Bit error occurred.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-only
+        STFER:
+          description: Stuff error occurred.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-only
+        CRCER:
+          description: CRC error occurred.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-only
+        FRMER:
+          description: Form error occurred.
+          bitOffset: 3
+          bitWidth: 1
+          access: read-only
+        ACKER:
+          description: ACK error occurred.
+          bitOffset: 4
+          bitWidth: 1
+          access: read-only
+        EDIR:
+          description: Direction of transfer while error occurred.
+          bitOffset: 5
+          bitWidth: 1
+          access: read-only
+        TXWRN:
+          description: Set when CANTXERR >= 96.
+          bitOffset: 6
+          bitWidth: 1
+          access: read-only
+        RXWRN:
+          description: Set when CANRXERR >= 96.
+          bitOffset: 6
+          bitWidth: 1
+          access: read-only
+    CANRXERR:
+      description: CAN Receive Error Counter Register
+      addressOffset: 0x19
+      access: read-only
+      fields:
+        RXERR:
+          description: Receive error counter.
+          bitOffset: 8
+          bitWidth: 8
+          access: read-only
+    CANTXERR:
+      description: CAN Transmit Error Counter Register
+      addressOffset: 0x1A
+      access: read-only
+      fields:
+        TXERR:
+          description: Transmit error counter.
+          bitOffset: 8
+          bitWidth: 8
+          access: read-only
+    CANALC:
+      description: CAN Arbitration Lost Code Capture Register
+      addressOffset: 0x1B
+      access: read-only
+      fields:
+        TXERR:
+          description: Arbitration lost bit number.
+          bitOffset: 0
+          bitWidth: 5
+          access: read-only
+
 "GPIO*":
   MODE:
     _add:
