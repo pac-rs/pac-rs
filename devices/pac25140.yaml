@@ -1287,3 +1287,86 @@ SCC:
       _replace_enum:
         NOT_LOCKED: [0, "PLL is not locked"]
         LOCKED: [1, "PLL is locked"]
+WWDT:
+  CTL:
+    _add:
+      EN:
+        description: Enable
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      INTEN:
+        description: Interrupt enable
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      RSTEN:
+        description: Power-on-reset enable
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      CLKSEL:
+        description: Clock selection
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      CLKDIV:
+        description: Input clock divider
+        bitOffset: 4
+        bitWidth: 4
+        access: read-write
+    CLKSEL:
+      FRCLK: [0, "FR Clock"]
+      ROSCCLK: [1, "ROSC Clock"]
+  _modify:
+    LOAD:
+      name: CDCTL
+    INTF:
+      name: FLAG
+    INTCLR:
+      name: CLEAR
+  CDCTL:
+    _add:
+      CDV:
+        description: Count down value
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+      WINDOW:
+        description: Window value. Can clear WWDT when counter is below this value.
+        bitOffset: 16
+        bitWidth: 16
+        access: read-write
+  CTR:
+    _add:
+      VALUE:
+        description: Counter value
+        bitOffset: 0
+        bitWidth: 16
+        access: read-only
+  FLAG:
+    _add:
+      IF:
+        description: Interrupt flag
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+      RSTF:
+        description: Reset flag
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+  CLEAR:
+    _add:
+      VALUE:
+        description: Watchdog clear
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+  LOCK:
+    _add:
+      VALUE:
+        description: Lock key
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
