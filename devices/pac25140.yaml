@@ -998,6 +998,10 @@ CRC:
         description: Clock divider (PCLK / n^2)
         bitOffset: 3
         bitWidth: 4
+      CDV:
+        description: Count-down value
+        bitOffset: 8
+        bitWidth: 24
   CTR:
     _add:
       VALUE:
