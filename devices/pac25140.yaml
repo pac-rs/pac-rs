@@ -1106,14 +1106,14 @@ SCC:
         access: read-write
 
     "P*DS":
-      6mA: [0, "6mA"]
-      8mA: [1, "8mA"]
-      11mA: [2, "11mA"]
-      14mA: [3, "14mA"]
-      17mA: [4, "17mA"]
-      20mA: [5, "20mA"]
-      22mA: [6, "22mA"]
-      25mA: [7, "25mA"]
+      STRENGTH_6mA: [0, "6mA"]
+      STRENGTH_8mA: [1, "8mA"]
+      STRENGTH_11mA: [2, "11mA"]
+      STRENGTH_14mA: [3, "14mA"]
+      STRENGTH_17mA: [4, "17mA"]
+      STRENGTH_20mA: [5, "20mA"]
+      STRENGTH_22mA: [6, "22mA"]
+      STRENGTH_25mA: [7, "25mA"]
 
     "P*ST":
       DISABLE: [0, "Disable"]
