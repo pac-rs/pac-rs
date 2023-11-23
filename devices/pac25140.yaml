@@ -351,8 +351,8 @@ CRC:
       CRC_16_IBM: [1, "CRC-16-IBM"]
       CRC_8_DALLAS_MAXIM: [2, "CRC-8-Dallas/Maxim"]
     DATAWIDTH:
-      WIDTH_32BITS: [0, "32-bits"]
-      WIDTH_8BITS: [1, "8-bits"]
+      WIDTH_32_BITS: [0, "32-bits"]
+      WIDTH_8_BITS: [1, "8-bits"]
   DATAIN:
     _add:
       VALUE:
