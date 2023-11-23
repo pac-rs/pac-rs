@@ -975,6 +975,13 @@ SCC:
       _replace_enum:
         NOT_LOCKED: [0, "PLL is not locked"]
         LOCKED: [1, "PLL is locked"]
+  CCSROSCTRIM:
+    _add:
+      TRIM:
+        description: ROSC trim value
+        bitOffset: 0
+        bitWidth: 7
+        access: read-write
   "P*PUEN":
     _add:
       P0:
