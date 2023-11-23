@@ -979,6 +979,32 @@ CRC:
         bitWidth: 1
         access: write
 
+"GPTIMER*":
+  CTL:
+    _add:
+      EN:
+        description: Timer enable
+        bitOffset: 0
+        bitWidth: 1
+      IE:
+        description: Interrupt enable
+        bitOffset: 1
+        bitWidth: 1
+      IF:
+        description: Interrupt flag
+        bitOffset: 2
+        bitWidth: 1
+      DIV:
+        description: Clock divider (PCLK / n^2)
+        bitOffset: 3
+        bitWidth: 4
+  CTR:
+    _add:
+      VALUE:
+        description: Counter value
+        bitOffset: 0
+        bitWidth: 24
+
 SCC:
   CCSCTL:
     CLKFAILIF:
