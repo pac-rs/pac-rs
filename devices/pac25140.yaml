@@ -928,6 +928,53 @@ CAN:
         access: write
 
 SCC:
+  CCSCTL:
+    CLKFAILIF:
+      _replace_enum:
+        NOT_SET: [0, "Int Flag Not Set"]
+        SET: [1, "Int Flag Set"]
+    SWRESET:
+      _replace_enum:
+        NOT_RESET: [0, "SW Reset Not Initiated"]
+        RESET: [1, "SW Reset Initiated"]
+    PCLKDIV:
+      _replace_enum:
+        HCLK_DIV_1: [0, "HCLK divided by 1"]
+        HCLK_DIV_2: [1, "HCLK divided by 2"]
+        HCLK_DIV_3: [2, "HCLK divided by 3"]
+        HCLK_DIV_4: [3, "HCLK divided by 4"]
+        HCLK_DIV_5: [4, "HCLK divided by 5"]
+        HCLK_DIV_6: [5, "HCLK divided by 6"]
+        HCLK_DIV_7: [6, "HCLK divided by 7"]
+    ACLKDIV:
+      _replace_enum:
+        SCLK_DIV_1: [0, "SCLK divided by 1"]
+        SCLK_DIV_2: [1, "SCLK divided by 2"]
+        SCLK_DIV_3: [2, "SCLK divided by 3"]
+        SCLK_DIV_4: [3, "SCLK divided by 4"]
+        SCLK_DIV_5: [4, "SCLK divided by 5"]
+        SCLK_DIV_6: [5, "SCLK divided by 6"]
+        SCLK_DIV_7: [6, "SCLK divided by 7"]
+    HCLKDIV:
+      _replace_enum:
+        SCLK_DIV_1: [0, "SCLK divided by 1"]
+        SCLK_DIV_2: [1, "SCLK divided by 2"]
+        SCLK_DIV_3: [2, "SCLK divided by 3"]
+        SCLK_DIV_4: [3, "SCLK divided by 4"]
+        SCLK_DIV_5: [4, "SCLK divided by 5"]
+        SCLK_DIV_6: [5, "SCLK divided by 6"]
+        SCLK_DIV_7: [6, "SCLK divided by 7"]
+  CCSPLLCTL:
+    PLLOUTDIV:
+      _replace_enum:
+        DIV_1: [0, "PLL output divided by 1"]
+        DIV_2: [1, "PLL output divided by 2"]
+        DIV_3: [2, "PLL output divided by 3"]
+        DIV_4: [3, "PLL output divided by 4"]
+    PLLLOCK:
+      _replace_enum:
+        NOT_LOCKED: [0, "PLL is not locked"]
+        LOCKED: [1, "PLL is locked"]
   "P*PUEN":
     _add:
       P0:
@@ -1239,54 +1286,6 @@ MEMCTL:
         NO_FLAG: [0, "No Invalid Memory Flag"]
         FLAG: [1, "Invalid Memory Flag Set"]
 
-SCC:
-  CCSCTL:
-    CLKFAILIF:
-      _replace_enum:
-        NOT_SET: [0, "Int Flag Not Set"]
-        SET: [1, "Int Flag Set"]
-    SWRESET:
-      _replace_enum:
-        NOT_RESET: [0, "SW Reset Not Initiated"]
-        RESET: [1, "SW Reset Initiated"]
-    PCLKDIV:
-      _replace_enum:
-        HCLK_DIV_1: [0, "HCLK divided by 1"]
-        HCLK_DIV_2: [1, "HCLK divided by 2"]
-        HCLK_DIV_3: [2, "HCLK divided by 3"]
-        HCLK_DIV_4: [3, "HCLK divided by 4"]
-        HCLK_DIV_5: [4, "HCLK divided by 5"]
-        HCLK_DIV_6: [5, "HCLK divided by 6"]
-        HCLK_DIV_7: [6, "HCLK divided by 7"]
-    ACLKDIV:
-      _replace_enum:
-        SCLK_DIV_1: [0, "SCLK divided by 1"]
-        SCLK_DIV_2: [1, "SCLK divided by 2"]
-        SCLK_DIV_3: [2, "SCLK divided by 3"]
-        SCLK_DIV_4: [3, "SCLK divided by 4"]
-        SCLK_DIV_5: [4, "SCLK divided by 5"]
-        SCLK_DIV_6: [5, "SCLK divided by 6"]
-        SCLK_DIV_7: [6, "SCLK divided by 7"]
-    HCLKDIV:
-      _replace_enum:
-        SCLK_DIV_1: [0, "SCLK divided by 1"]
-        SCLK_DIV_2: [1, "SCLK divided by 2"]
-        SCLK_DIV_3: [2, "SCLK divided by 3"]
-        SCLK_DIV_4: [3, "SCLK divided by 4"]
-        SCLK_DIV_5: [4, "SCLK divided by 5"]
-        SCLK_DIV_6: [5, "SCLK divided by 6"]
-        SCLK_DIV_7: [6, "SCLK divided by 7"]
-  CCSPLLCTL:
-    PLLOUTDIV:
-      _replace_enum:
-        DIV_1: [0, "PLL output divided by 1"]
-        DIV_2: [1, "PLL output divided by 2"]
-        DIV_3: [2, "PLL output divided by 3"]
-        DIV_4: [3, "PLL output divided by 4"]
-    PLLLOCK:
-      _replace_enum:
-        NOT_LOCKED: [0, "PLL is not locked"]
-        LOCKED: [1, "PLL is locked"]
 WWDT:
   CTL:
     _add:
