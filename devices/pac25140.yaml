@@ -1011,6 +1011,11 @@ CRC:
 
 SCC:
   CCSCTL:
+    FRCLKMUXSEL:
+      _replace_enum:
+        ROSC: [0, "Internal ring oscillator clock"]
+        CLKREF: [1, "Internal reference clock"]
+        EXTCLK: [3, "External clock"]
     CLKFAILIF:
       _replace_enum:
         NOT_SET: [0, "Int Flag Not Set"]
