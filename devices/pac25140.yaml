@@ -323,6 +323,58 @@ CAN:
           bitWidth: 5
           access: read-only
 
+CRC:
+  CTL:
+    _add:
+      POLYSEL:
+        description: CRC polynomial select
+        bitOffset: 0
+        bitWidth: 2
+        access: read-write
+      DATAWIDTH:
+        description: Input data width
+        bitOffset: 2
+        bitWidth: 1
+        access: read-write
+      OUTREF:
+        description: Reflect output data from CRC engine
+        bitOffset: 3
+        bitWidth: 1
+        access: read-write
+      INREF:
+        description: Reflect input data from CRC engine
+        bitOffset: 4
+        bitWidth: 1
+        access: read-write
+    POLYSEL:
+      CRC_16_CCITT: [0, "CRC-16-CCITT"]
+      CRC_16_IBM: [1, "CRC-16-IBM"]
+      CRC_8_DALLAS_MAXIM: [2, "CRC-8-Dallas/Maxim"]
+    DATAWIDTH:
+      WIDTH_32BITS: [0, "32-bits"]
+      WIDTH_8BITS: [1, "8-bits"]
+  DATAIN:
+    _add:
+      VALUE:
+        description: Data input value
+        bitOffset: 0
+        bitWidth: 32
+        access: read-write
+  SEED:
+    _add:
+      VALUE:
+        description: Seed value
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+  DATAOUT:
+    _add:
+      VALUE:
+        description: Data output value
+        bitOffset: 0
+        bitWidth: 16
+        access: read-write
+
 "GPIO*":
   MODE:
     _add:
