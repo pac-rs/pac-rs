@@ -1463,3 +1463,208 @@ WWDT:
         bitOffset: 0
         bitWidth: 32
         access: read-write
+
+"USART*":
+  _delete:
+    - RBR_CON
+    - THR_STAT
+    - DRL_DAT
+    - IER_CLK
+    - IIR_IMSC
+    - FCR_RIS
+    - LCR_MIS
+    - ICLR
+    - LSR
+    - SCR_SSCR
+    - EFR
+  _add:
+    RBR:
+      description: Receive Buffer Register
+      addressOffset: 0x0
+      access: read-write
+      fields:
+        RBR:
+          description: Contains the oldest received character in the UART RX FIFO.
+          bitOffset: 0
+          bitWidth: 8
+          access: read-write
+    THR:
+      description: Transmit Holding Register
+      addressOffset: 0x4
+      access: read-write
+      fields:
+        THR:
+          description: Writing to the THR causes the data to be stored in the transmit FIFO.
+          bitOffset: 0
+          bitWidth: 8
+          access: read-write
+    DLR:
+      description: Divisor Latch Register
+      addressOffset: 0x8
+      access: read-write
+      fields:
+        DLR:
+          description: Sets the baud rate for the module.
+          bitOffset: 0
+          bitWidth: 16
+          access: read-write
+    IER:
+      description: Interrupt Enable Register
+      addressOffset: 0xC
+      access: read-write
+      fields:
+        RBRIE:
+          description: RX buffer register interrupt enable.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        THRIE:
+          description: TX holding register interrupt Enable.
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        RLSIE:
+          description: RX line status interrupt enable.
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+    IIR:
+      description: Interrupt Identification Register
+      addressOffset: 0x10
+      access: read-write
+      fields:
+        INTSTATUS:
+          description: Interrupt status.
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        THRIE:
+          description: Interrupt identification
+          bitOffset: 1
+          bitWidth: 4
+          access: read-write
+    FCR:
+      description: FIFO Control Register
+      addressOffset: 0x14
+      access: read-write
+      fields:
+        FIFOEN:
+          description: FIFO enable
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        RXFIFORST:
+          description: RX FIFO reset
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        TXFIFORST:
+          description: TX FIFO reset
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+        TXTL:
+          description: TX trigger level
+          bitOffset: 4
+          bitWidth: 2
+          access: read-write
+        RXTL:
+          description: RX trigger level
+          bitOffset: 6
+          bitWidth: 2
+          access: read-write
+    LCR:
+      description: Line Control Register
+      addressOffset: 0x18
+      access: read-write
+      fields:
+        WLS:
+          description: Word length select
+          bitOffset: 0
+          bitWidth: 2
+          access: read-write
+        SBS:
+          description: Stop bit select
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+        PEN:
+          description: Parity enable
+          bitOffset: 3
+          bitWidth: 1
+          access: read-write
+        PSEL:
+          description: Parity select
+          bitOffset: 4
+          bitWidth: 2
+          access: read-write
+        BCON:
+          description: Break control
+          bitOffset: 6
+          bitWidth: 1
+          access: read-write
+    LSR:
+      description: Line Status Register
+      addressOffset: 0x20
+      access: read-write
+      fields:
+        RDR:
+          description: Receive data ready
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        OE:
+          description: Overrun error
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        PE:
+          description: Parity error
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+        FE:
+          description: Framing error
+          bitOffset: 3
+          bitWidth: 1
+          access: read-write
+        BI:
+          description: Break interrupt
+          bitOffset: 4
+          bitWidth: 1
+          access: read-write
+        THRE:
+          description: Transmitter holding register empty
+          bitOffset: 5
+          bitWidth: 1
+          access: read-write
+        TEMT:
+          description: Transmitter empty
+          bitOffset: 6
+          bitWidth: 1
+          access: read-write
+        RXFE:
+          description: Error in RX FIFO
+          bitOffset: 7
+          bitWidth: 1
+          access: read-write
+    SCR:
+      description: Scratch Pad Register
+      addressOffset: 0x28
+      access: read-write
+      fields:
+        PAD:
+          description: A read-able, write-able byte.
+          bitOffset: 0
+          bitWidth: 8
+          access: read-write
+    EFR:
+      description: Enhanced Feature Register
+      addressOffset: 0x2C
+      access: read-write
+      fields:
+        ENMODE:
+          description: Enhanced mode
+          bitOffset: 4
+          bitWidth: 1
+          access: read-write
