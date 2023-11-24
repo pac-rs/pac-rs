@@ -1668,3 +1668,17 @@ WWDT:
           bitOffset: 4
           bitWidth: 1
           access: read-write
+  LCR:
+    WLS:
+      LENGTH_5: [0, "5-bit character length"]
+      LENGTH_6: [1, "6-bit character length"]
+      LENGTH_7: [2, "7-bit character length"]
+      LENGTH_8: [3, "8-bit character length"]
+    SBS:
+      STOP_1: [0, "1 stop bit"]
+      STOP_2: [1, "2 stop bits"]
+    PSEL:
+      ODD: [0, "Odd parity"]
+      EVEN: [1, "Even parity"]
+      FORCED_1: [2, "Forced 1 stick parity"]
+      FORCED_0: [3, "Forced 0 stick parity"]
