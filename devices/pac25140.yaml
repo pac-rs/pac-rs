@@ -1033,6 +1033,7 @@ SCC:
         HCLK_DIV_5: [4, "HCLK divided by 5"]
         HCLK_DIV_6: [5, "HCLK divided by 6"]
         HCLK_DIV_7: [6, "HCLK divided by 7"]
+        HCLK_DIV_8: [7, "HCLK divided by 8"]
     ACLKDIV:
       _replace_enum:
         SCLK_DIV_1: [0, "SCLK divided by 1"]
@@ -1042,6 +1043,7 @@ SCC:
         SCLK_DIV_5: [4, "SCLK divided by 5"]
         SCLK_DIV_6: [5, "SCLK divided by 6"]
         SCLK_DIV_7: [6, "SCLK divided by 7"]
+        SCLK_DIV_8: [7, "SCLK divided by 8"]
     HCLKDIV:
       _replace_enum:
         SCLK_DIV_1: [0, "SCLK divided by 1"]
@@ -1051,6 +1053,7 @@ SCC:
         SCLK_DIV_5: [4, "SCLK divided by 5"]
         SCLK_DIV_6: [5, "SCLK divided by 6"]
         SCLK_DIV_7: [6, "SCLK divided by 7"]
+        SCLK_DIV_8: [6, "SCLK divided by 8"]
   CCSPLLCTL:
     PLLOUTDIV:
       _replace_enum:
