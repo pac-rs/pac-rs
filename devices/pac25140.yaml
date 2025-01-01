@@ -1685,3 +1685,119 @@ WWDT:
       EVEN: [1, "Even parity"]
       FORCED_1: [2, "Forced 1 stick parity"]
       FORCED_0: [3, "Forced 0 stick parity"]
+
+_add:
+  SOCB:
+    description: SOC bus bridge
+    baseAddress: 0x40200000
+    interrupts:
+      IRQ_SOCB:
+        description: SOC bus bridge interrupt
+        value: 14
+
+SOCB:
+  _add:
+    CTL:
+      description: SOC bus bridge control
+      addressOffset: 0x00
+      access: read-write
+      fields:
+        SSEN:
+          description: SOC bus bridge enable
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+        SIE:
+          description: SOC bus bridge interrupt enable
+          bitOffset: 1
+          bitWidth: 1
+        MTRARM:
+          description: re-arms the SOCBCTL.MTRANS operation by de-asserting CSx chip select and returning the master mode state machine to IDLE.
+          bitOffset: 5
+          bitWidth: 1
+    CFG:
+      description: SOC bus bridge configuration
+      addressOffset: 0x04
+      access: read-write
+      fields:
+        WL:
+          description: Word length
+          bitOffset: 0
+          bitWidth: 2
+          WL_8: [0, "8-bit word length"]
+          WL_16: [1, "16-bit word length"]
+          WL_24: [2, "24-bit word length"]
+          WL_32: [3, "32-bit word length"]
+        MRST:
+          description: Module reset
+          bitOffset: 2
+          bitWidth: 1
+    STAT:
+      description: SOC bus bridge status
+      addressOffset: 0x14
+      access: read-write
+      fields:
+        INT:
+          description: SOC bus bridge interrupt
+          bitOffset: 0
+          bitWidth: 1
+        RDOFL:
+          description: Read bufffer overflow
+          bitOffset: 2
+          bitWidth: 1
+        CYC_DONE:
+          description: Cycle done (current transfer complete)
+          bitOffset: 5
+          bitWidth: 1
+        WRUFL:
+          description: Write buffer underflow
+          bitOffset: 8
+          bitWidth: 1
+        TXFULL:
+          description: Transmit holding register in use
+          bitOffset: 9
+          bitWidth: 1
+        RXFULL:
+          description: Receive holding register in use
+          bitOffset: 10
+          bitWidth: 1
+        CURSTATE:
+          description: Raw status of the SOC bus bridge master state machine
+          bitOffset: 12
+          bitWidth: 3
+    BD:
+      description: SOC bus bridge data
+      addressOffset: 0x1C
+      access: read-write
+      fields:
+        DATA:
+          description: SOC bus bridge data
+          bitOffset: 0
+          bitWidth: 8
+    INT_EN:
+      description: SOC bus bridge interrupt enable
+      addressOffset: 0x20
+      fields:
+        RDOFL_EN:
+          description: Read buffer overflow interrupt enable
+          bitOffset: 2
+          bitWidth: 1
+        CYC_DONE:
+          description: Cycle done interruot enable
+          bitOffset: 5
+          bitWidth: 1
+        WRUFL_EN:
+          description: Write buffer underflow interrupt enable
+          bitOffset: 8
+          bitWidth: 1
+
+  STAT:
+    CURSTATE:
+      IDLE: [0, "Idle"]
+      CS_SETUP: [1, "Chip select setup"]
+      TRANSFER: [2, "Transfer"]
+      CS_HOLD: [3, "Chip select hold"]
+      CS_WAIT: [4, "Chip select wait"]
+      CK_WAIT: [5, "Clock wait"]
+      M_TRANS: [6, "Multiple transfer"]
+      CS_BEGIN: [7, "Chip select begin"]
