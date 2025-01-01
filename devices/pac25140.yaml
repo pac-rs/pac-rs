@@ -1,5 +1,26 @@
 _svd: ../svd/pac25140.svd
 
+_add:
+  SSPA:
+    description: SSP A
+    baseAddress: 0x40020000
+  SSPB:
+    description: SSP B
+    baseAddress: 0x40030000
+  SSPC:
+    description: SSP C
+    baseAddress: 0x40040000
+  SSPD:
+    description: SSP D
+    baseAddress: 0x40050000
+  SOCB:
+    description: SOC bus bridge
+    baseAddress: 0x40200000
+    interrupts:
+      IRQ_SOCB:
+        description: SOC bus bridge interrupt
+        value: 14
+
 CAN:
   _delete:
     - ISR_SR_CMR_MR
@@ -1686,14 +1707,203 @@ WWDT:
       FORCED_1: [2, "Forced 1 stick parity"]
       FORCED_0: [3, "Forced 0 stick parity"]
 
-_add:
-  SOCB:
-    description: SOC bus bridge
-    baseAddress: 0x40200000
-    interrupts:
-      IRQ_SOCB:
-        description: SOC bus bridge interrupt
-        value: 14
+"SSP*":
+  _add:
+    CON:
+      description: Control
+      addressOffset: 0x00
+      access: read-write
+      fields:
+        DSS:
+          description: Data size select
+          bitOffset: 0
+          bitWidth: 5
+        FRF:
+          description: Frame format
+          bitOffset: 5
+          bitWidth: 2
+        CPO:
+          description: Clock out polarity
+          bitOffset: 7
+          bitWidth: 1
+        CPH:
+          description: Clock out phase
+          bitOffset: 8
+          bitWidth: 1
+        SOD:
+          description: Slave output disable
+          bitOffset: 9
+          bitWidth: 1
+        MS:
+          description: Master/slave mode
+          bitOffset: 10
+          bitWidth: 1
+        EN:
+          description: Controller enable
+          bitOffset: 11
+          bitWidth: 1
+        LBM:
+          description: Loopback mode enable
+          bitOffset: 12
+          bitWidth: 1
+        LSB_FIRST:
+          description: Endian order
+          bitOffset: 13
+          bitWidth: 1
+    STAT:
+      description: Status
+      addressOffset: 0x04
+      fields:
+        TFE:
+          description: Transmit FIFO empty
+          bitOffset: 0
+          bitWidth: 1
+        TNF:
+          description: Transmit FIFO not full
+          bitOffset: 1
+          bitWidth: 1
+        RNE:
+          description: Receive FIFO not empty
+          bitOffset: 2
+          bitWidth: 1
+        RFF:
+          description: Receive FIFO full
+          bitOffset: 3
+          bitWidth: 1
+        BSY:
+          description: Busy
+          bitOffset: 4
+          bitWidth: 1
+    DAT:
+      description: Data
+      addressOffset: 0x08
+      fields:
+        DATA:
+          description: Data frame
+          bitOffset: 0
+          bitWidth: 32
+    CLK:
+      description: Clock control
+      addressOffset: 0x0C
+      fields:
+        N:
+          description: Clock prescaler
+          bitOffset: 0
+          bitWidth: 8
+        M:
+          description: Clock prescaler
+          bitOffset: 8
+          bitWidth: 7
+    MSC:
+      description: Interrupt mask set and clear
+      addressOffset: 0x10
+      fields:
+        ROIM:
+          description: Receive overrun interrupt mask
+          bitOffset: 0
+          bitWidth: 1
+        RTIM:
+          description: Receive timeout interrupt mask
+          bitOffset: 1
+          bitWidth: 1
+        RXIM:
+          description: Receive FIFO interrupt mask
+          bitOffset: 2
+          bitWidth: 1
+        TXIM:
+          description: Transmit FIFO interrupt mask
+          bitOffset: 3
+          bitWidth: 1
+    RIS:
+      description: Raw interrupt status
+      addressOffset: 0x14
+      fields:
+        RORIS:
+          description: RX FIFO overwrite interrupt status
+          bitOffset: 0
+          bitWidth: 1
+        RTRIS:
+          description: RX FIFO timeout interrupt status
+          bitOffset: 1
+          bitWidth: 1
+        RXRIS:
+          description: RX FIFO raw interrupt status
+          bitOffset: 2
+          bitWidth: 1
+        TXRIS:
+          description: TX FIFO raw interrupt status
+          bitOffset: 3
+          bitWidth: 1
+    MIS:
+      description: Masked interrupt status
+      addressOffset: 0x18
+      fields:
+        ROMIS:
+          description: RX FIFO overwrite interrupt status
+          bitOffset: 0
+          bitWidth: 1
+        RTMIS:
+          description: RX FIFO timeout interrupt status
+          bitOffset: 1
+          bitWidth: 1
+        RXMIS:
+          description: RX FIFO masked interrupt status
+          bitOffset: 2
+          bitWidth: 1
+        TXMIS:
+          description: TX FIFO masked interrupt status
+          bitOffset: 3
+          bitWidth: 1
+    CLR:
+      description: Interrupt clear
+      addressOffset: 0x1C
+      fields:
+        ROIC:
+          description: RX FIFO overrun interrupt clear
+          bitOffset: 0
+          bitWidth: 1
+        RTIC:
+          description: RX FIFO timeout interrupt clear
+          bitOffset: 1
+          bitWidth: 1
+    SCR:
+      description: Slave select configuration
+      addressOffset: 0x28
+      fields:
+        SELSS:
+          description: Slave select signal control
+          bitOffset: 0
+          bitWidth: 2
+        SWSEL:
+          description: Slave select software control
+          bitOffset: 2
+          bitWidth: 1
+        SWSS:
+          description: Slave select state
+          bitOffset: 3
+          bitWidth: 1
+        SPH:
+          description: Slave select pull high
+          bitOffset: 4
+          bitWidth: 1
+
+  CON:
+    FRF:
+      SPI: [0, "SPI"]
+      TI: [1, "TI"]
+      MICROWIRE: [2, "Microwire"]
+    CPO:
+      ACTIVE_HIGH: [0, "Active high"]
+      ACTIVE_LOW: [1, "Active low"]
+    CPH:
+      FIRST_EDGE: [0, "Capture serial data on the first edge transition of the frame"]
+      SECOND_EDGE: [1, "Capture serial data on the second edge of transition the frame"]
+    SOD:
+      ENABLED: [0, "The SSP can drive the MISO output in slave mode"]
+      DISABLED: [1, "The SSP must not drive the MISO output in slave mode"]
+    MS:
+      MASTER: [0, "The SSP acts as the bus master"]
+      SLAVE: [1, "The SSP acts as a bus slave"]
 
 SOCB:
   _add:
