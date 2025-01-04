@@ -16,8 +16,8 @@ import argparse
 import re
 import yaml
 
-VERSION = "0.1.2"
-SVD2RUST_VERSION = "0.30.1"
+VERSION = "0.1.3"
+SVD2RUST_VERSION = "0.35.0"
 
 CRATE_DOC_FEATURES = {
     "pac22": ["critical-section", "defmt", "rt", "pac22140"],
