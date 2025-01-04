@@ -72,7 +72,7 @@ SRC_LIB_RS_TPL = """\
 //! [svd2rust/#peripheral-api](https://docs.rs/svd2rust/{svd2rust_version}/svd2rust/#peripheral-api)
 //!
 //! For more details see the README here:
-//! [qorvo-pac-rs](https://github.com/pac-rs/pac-rs)
+//! [pac-rs](https://github.com/pac-rs/pac-rs)
 //!
 //! This crate supports all {family} devices; for the complete list please
 //! see:
