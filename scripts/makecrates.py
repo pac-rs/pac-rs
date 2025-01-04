@@ -20,8 +20,8 @@ VERSION = "0.1.2"
 SVD2RUST_VERSION = "0.30.1"
 
 CRATE_DOC_FEATURES = {
-    "pac22": ["critical-section", "rt", "pac22140"],
-    "pac25": ["critical-section", "rt", "pac25140"]
+    "pac22": ["critical-section", "defmt", "rt", "pac22140"],
+    "pac25": ["critical-section", "defmt", "rt", "pac25140"]
 }
 
 CRATE_DOC_TARGETS = {
@@ -49,6 +49,7 @@ cortex-m = "0.7.6"
 cortex-m-rt = {{ version = ">=0.6.15,<0.8", optional = true }}
 vcell = "0.1.3"
 portable-atomic = {{ version = "1", default-features = false, optional = true }}
+defmt = {{ version = "0.3.10", optional = true }}
 
 [package.metadata.docs.rs]
 features = {docs_features}
