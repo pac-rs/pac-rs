@@ -407,7 +407,7 @@ CRC:
       P1:
         description: Pin 2
         bitOffset: 2
-        bitWidth: 4
+        bitWidth: 2
         access: read-write
       P2:
         description: Pin 3
@@ -427,7 +427,7 @@ CRC:
       P5:
         description: Pin 5
         bitOffset: 10
-        bitWidth: 4
+        bitWidth: 2
         access: read-write
       P6:
         description: Pin 6
