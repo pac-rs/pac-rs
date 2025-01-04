@@ -4,7 +4,7 @@ Copyright 2017-2019 Adam Greig
 Licensed under the MIT and Apache 2.0 licenses.
 
 Autogenerate the crate Cargo.toml, build.rs, README.md and src/lib.rs files
-based on available YAML files for each STM32 family.
+based on available YAML files for each PAC family.
 
 Usage: python3 scripts/makecrates.py devices/
 """
@@ -145,9 +145,20 @@ fn main() {{
     if env::var_os("CARGO_FEATURE_RT").is_some() {{
         let out = &PathBuf::from(env::var_os("OUT_DIR").unwrap());
         println!("cargo:rustc-link-search={{}}", out.display());
-        let device_file = {device_clauses};
-        fs::copy(device_file, out.join("device.x")).unwrap();
-        println!("cargo:rerun-if-changed={{}}", device_file);
+        let devices = [{devices}];
+        let mut device_file = None;
+        for &d in &devices {{
+            if env::var_os(&format!("CARGO_FEATURE_{{}}", d.to_uppercase())).is_some() {{
+                device_file = Some(format!("src/{{d}}/device.x"));
+                break;
+            }}
+        }}
+        if let Some(device_file) = device_file {{
+            fs::copy(&device_file, out.join("device.x")).unwrap();
+            println!("cargo:rerun-if-changed={{device_file}}");
+        }} else {{
+            panic!("No device features selected. Avaliable device features are: {{devices:?}}");
+        }}
     }}
     println!("cargo:rerun-if-changed=build.rs");
 }}
@@ -177,17 +188,13 @@ def make_features(devices):
     return "\n".join("{} = []".format(d) for d in sorted(devices))
 
 
+def make_feature_list(devices):
+    return ", ".join("\"{}\"".format(d) for d in sorted(devices))
+
+
 def make_mods(devices):
     return "\n".join('#[cfg(feature = "{0}")]\npub mod {0};\n'.format(d)
                      for d in sorted(devices))
-
-
-def make_device_clauses(devices):
-    return " else ".join("""\
-        if env::var_os("CARGO_FEATURE_{}").is_some() {{
-            "src/{}/device.x"
-        }}""".strip().format(d.upper(), d) for d in sorted(devices)) + \
-            " else { panic!(\"No device features selected\"); }"
 
 
 def main(devices_path, yes, families):
@@ -195,7 +202,7 @@ def main(devices_path, yes, families):
 
     for path in glob.glob(os.path.join(devices_path, "*.yaml")):
         yamlfile = os.path.basename(path)
-        family = re.match(r'pac[0-9][0-9]', yamlfile)[0]
+        family = re.match(r'pac[0-9]+[0-9]', yamlfile)[0]
         device = os.path.splitext(yamlfile)[0].lower()
         if len(families) == 0 or family in families:
             if family not in devices:
@@ -214,7 +221,7 @@ def main(devices_path, yes, families):
         devices[family] = sorted(devices[family])
         crate = family.lower()
         features = make_features(devices[family])
-        clauses = make_device_clauses(devices[family])
+        feature_list = make_feature_list(devices[family])
         mods = make_mods(devices[family])
         ufamily = family.upper()
         cargo_toml = CARGO_TOML_TPL.format(
@@ -227,7 +234,7 @@ def main(devices_path, yes, families):
             devices=make_device_rows(table, family))
         lib_rs = SRC_LIB_RS_TPL.format(family=ufamily, mods=mods, crate=crate,
                                        svd2rust_version=SVD2RUST_VERSION)
-        build_rs = BUILD_TPL.format(device_clauses=clauses)
+        build_rs = BUILD_TPL.format(devices=feature_list)
 
         os.makedirs(os.path.join(crate, "src"), exist_ok=True)
         with open(os.path.join(crate, "Cargo.toml"), "w") as f:
