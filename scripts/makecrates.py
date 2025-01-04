@@ -20,8 +20,8 @@ VERSION = "0.1.3"
 SVD2RUST_VERSION = "0.35.0"
 
 CRATE_DOC_FEATURES = {
-    "pac22": ["critical-section", "defmt", "rt", "pac22140"],
-    "pac25": ["critical-section", "defmt", "rt", "pac25140"]
+    "pac22": ["atomics", "critical-section", "defmt", "rt", "pac22140"],
+    "pac25": ["atomics", "critical-section", "defmt", "rt", "pac25140"]
 }
 
 CRATE_DOC_TARGETS = {
